@@ -1,4 +1,5 @@
 pyyaml
+pyyaml
 requests
 websocket-client
 transformers
