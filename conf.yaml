@@ -19,7 +19,7 @@ ollama:
   ORGANIZATION_ID: "org_eternity"
   PROJECT_ID: "project_glass"
   ## LLM name
-  MODEL: "qwen2.5:latest"
+  MODEL: "llama3.2:3b"
   # system prompt is at the very end of this file
   VERBOSE: False
 
@@ -93,7 +93,7 @@ VOICE_INPUT_ON: True
 MIC_IN_BROWSER: False # Deprecated and useless now. Do not enable it. Bad things will happen.
 
 # speech to text model options: "Faster-Whisper", "WhisperCPP", "Whisper", "AzureASR", "FunASR", "GroqWhisperASR"
-ASR_MODEL: "Faster-Whisper"
+ASR_MODEL: "WhisperCPP"
 
 AzureASR:
   api_key: "azure_api_key"
@@ -108,7 +108,7 @@ Faster-Whisper:
 
 WhisperCPP:
   # all available models are listed on https://abdeladim-s.github.io/pywhispercpp/#pywhispercpp.constants.AVAILABLE_MODELS
-  model_name: "small"
+  model_name: "large"
   model_dir: "asr/models"
   print_realtime: False
   print_progress: False
@@ -139,7 +139,7 @@ GroqWhisperASR:
 
 # ============== Text to Speech ==============
 TTS_ON: True
-TTS_MODEL: "edgeTTS"
+TTS_MODEL: "pyttsx3TTS"
 # text to speech model options: 
 #   "AzureTTS", "pyttsx3TTS", "edgeTTS", "barkTTS", 
 #   "cosyvoiceTTS", "meloTTS", "piperTTS", "coquiTTS",
@@ -225,11 +225,11 @@ coquiTTS:
 #  ============== Translate (to only change the language for TTS) ==============
 # Like... you speak and read the subtitles in English, and the TTS speaks Japanese or that kind of things
 
-TRANSLATE_AUDIO: False
+TRANSLATE_AUDIO: True
 TRANSLATE_PROVIDER: "DeepLX"
 
 DeepLX:
-  DEEPLX_TARGET_LANG: "JA"
+  DEEPLX_TARGET_LANG: "EN"
   DEEPLX_API_ENDPOINT: "http://localhost:1188/v2/translate"
 
 #  ============== Other Settings ==============
